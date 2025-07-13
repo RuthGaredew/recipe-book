@@ -29,20 +29,13 @@ document.getElementById('recipe-form').addEventListener('submit', function(e) {
         recipeCount++; // Increment recipe count
         newRecipe.innerHTML = `
             <div class="recipe-number">${recipeCount}</div>
-            <div class="recipe-content">
-                <h3>${title}</h3>
-                <h4>Ingredients:</h4>
-                <p>${ingredients}</p>
-                <h4>Instructions:</h4>
-                <p>${instructions}</p>
-            </div>
-            <div class="recipe-image">
-                ${imageUrl ? `<img src="${imageUrl}" alt="${title} image">` : ''}
-            </div>
-            <div class="recipe-video">
-               
-                ${videoUrl ? `<video controls><source src="${videoUrl}" type="video/mp4">Your browser does not support the video tag.</video>` : ''}
-            </div>
+            <h3>${title}</h3>
+            <h4>Ingredients:</h4>
+            <p>${ingredients}</p>
+            <h4>Instructions:</h4>
+            <p>${instructions}</p>
+            ${imageUrl ? `<img src="${imageUrl}" alt="${title} image">` : ''}
+            ${videoUrl ? `<video controls><source src="${videoUrl}" type="video/mp4">Your browser does not support the video tag.</video>` : ''}
         `;
         recipeList.appendChild(newRecipe);
         document.getElementById('recipe-form').reset();

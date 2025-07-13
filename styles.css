@@ -19,7 +19,7 @@ form {
     display: flex;
     flex-direction: column;
     margin-bottom: 20px;
-    background: #fff; /* White background */
+    background: #fff; /* White background for the form */
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
@@ -49,7 +49,7 @@ button {
 
 button:hover {
     background-color: #ffa07a; /* Light Salmon on hover */
-    transform: scale(1.05);
+    transform: scale(1.05); /* Slightly enlarges button on hover */
 }
 
 #recipe-list {
@@ -60,60 +60,50 @@ button:hover {
 }
 
 .recipe {
-    background: #fff; /* White background */
+    background: #fff; /* White background for recipes */
     border: 2px solid #ff6347; /* Tomato border */
     padding: 15px;
     border-radius: 10px;
-    display: flex; /* Flexbox for layout */
-    gap: 20px; /* Space between left and right */
-}
-
-.recipe-content {
-    flex: 1; /* Takes remaining space */
-}
-
-.recipe-image {
-    flex: 0 0 200px; /* Fixed width for image */
-}
-
-
-.recipe img {
-    max-width: 100%; /* Responsive image */
-    border-radius: 5px;
-}
-
-.recipe video {
-    width: 100%; /* Responsive video */
-    border-radius: 5px;
-    margin-top: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
 }
 
 .recipe h3 {
-    color: #2e8b57; /* Sea Green for titles */
+    color: #2e8b57; /* Sea Green for recipe titles */
     margin: 0;
+}
+
+.recipe-number {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    background-color: #ff6347; /* Tomato background */
+    padding: 5px 10px;
+    border-radius: 50%;
 }
 
 h4 {
     color: #4682b4; /* Steel Blue for subtitles */
 }
 
-.recipe-number {
-    font-size: 24px;
-    font-weight: bold;
-    color: #ff6347; /* Tomato color */
+.recipe img {
+    max-width: 100%; /* Responsive image */
+    border-radius: 5px;
+    margin: 10px 0;
+}
+
+.recipe video {
+    width: 100%; /* Responsive video */
+    border-radius: 5px;
 }
 
 /* Media Queries */
 @media (max-width: 600px) {
     input, textarea, button {
         width: 100%;
-    }
-    
-    .recipe {
-        flex-direction: column; /* Stack elements on mobile */
-    }
-
-    .recipe-image {
-        flex: none; /* Remove fixed width on mobile */
     }
 }
