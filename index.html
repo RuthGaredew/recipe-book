@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Recipe Book</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Simple Recipe Book</h1>
+    </header>
+    <main>
+        <section>
+            <form id="recipe-form" aria-label="Recipe Submission Form">
+                <input type="text" id="recipe-title" placeholder="Recipe Title" required>
+                <textarea id="recipe-ingredients" placeholder="Ingredients" required></textarea>
+                <textarea id="recipe-instructions" placeholder="Instructions" required></textarea>
+                <input type="file" id="recipe-image" accept="image/*">
+                <input type="url" id="recipe-video" placeholder="Video URL (YouTube or Vimeo)">
+                <button type="submit">Add Recipe</button>
+            </form>
+        </section>
+        <section>
+            <h2>Recipes</h2>
+            <div id="recipe-list"></div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
